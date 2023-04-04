@@ -1,4 +1,3 @@
-Feature: Resul
-  Background: back
-  Scenario: Hurfasdasdkir
-  Scenario: asdas
+Feature: Resasdul
+  Scenario: asd
+  Scenario: Hurfi
