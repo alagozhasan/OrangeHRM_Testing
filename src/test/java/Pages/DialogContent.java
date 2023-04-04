@@ -28,4 +28,9 @@ public class DialogContent {
     @FindBy(xpath="//div[contains(text(),'successfully')]")
     public WebElement successMessage;
 
+    @FindBy(xpath="//ms-search-button//button")
+    public WebElement searchButton;
+
+
+
 }
