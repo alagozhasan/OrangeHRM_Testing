@@ -31,6 +31,8 @@ public class DialogContent {
     @FindBy(xpath="//ms-search-button//button")
     public WebElement searchButton;
 
+    @FindBy(xpath="//div[contains(text(),'already exists')]")
+    public WebElement alreadyExist;
     @FindBy(xpath="//ms-text-field[@formcontrolname='shortName']/input")
     public WebElement shortName;
 
