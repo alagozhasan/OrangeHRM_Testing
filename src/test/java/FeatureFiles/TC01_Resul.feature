@@ -1,2 +1,2 @@
-Feature: REsul
-  Scenario: Hürfikir
+Feature: Resul
+  Scenario: Hurfikir
