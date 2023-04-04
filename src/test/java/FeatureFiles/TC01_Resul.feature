@@ -1,2 +1,4 @@
 Feature: Resul
-  Scenario: Hurfikir
+  Background: back
+  Scenario: Hurfasdasdkir
+  Scenario: asdas
