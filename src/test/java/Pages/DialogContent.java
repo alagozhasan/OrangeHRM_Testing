@@ -22,4 +22,10 @@ public class DialogContent {
     @FindBy(css="input[formcontrolname='password']")
     public WebElement password;
 
+    @FindBy(xpath="//ms-save-button/button")
+    public WebElement saveButton;
+
+    @FindBy(xpath="//div[contains(text(),'successfully')]")
+    public WebElement successMessage;
+
 }
