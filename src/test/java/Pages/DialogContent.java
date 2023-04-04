@@ -31,6 +31,8 @@ public class DialogContent {
     @FindBy(xpath="//ms-search-button//button")
     public WebElement searchButton;
 
+    @FindBy(xpath="//ms-text-field[@formcontrolname='shortName']/input")
+    public WebElement shortName;
 
 
 }
