@@ -1,2 +1,3 @@
-Feature: Resul
-  Scenario: Hurfikir
+Feature: Resasdul
+  Scenario: asd
+  Scenario: Hurfi
