@@ -1,5 +1,7 @@
-import Pages.Parent;
+package Pages;
+
 import Utilities.GWD;
+import org.openqa.selenium.support.PageFactory;
 
 public class Elements extends Parent {
 
