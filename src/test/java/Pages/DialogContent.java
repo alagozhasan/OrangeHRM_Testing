@@ -11,13 +11,13 @@ public class DialogContent {
     @FindBy(css = "")
     public WebElement nameInput;
 
-    @FindBy(css = "")
+    @FindBy(css="input[formcontrolname='password']")
     public WebElement passwordInput;
     @FindBy(css = "input[formcontrolname='username']")
     public WebElement username;
 
-    @FindBy(css="input[formcontrolname='password']")
-    public WebElement password;
+//    @FindBy(css="input[formcontrolname='password']")
+//    public WebElement password; // Aynısından vardı
 
 
 
