@@ -1,5 +1,6 @@
 package Pages;
 
+import Pages.Parent;
 import Utilities.GWD;
 import org.openqa.selenium.support.PageFactory;
 
