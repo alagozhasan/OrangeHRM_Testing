@@ -30,10 +30,6 @@ public class DialogContent {
     public WebElement addButton;
 
 
-
-    @FindBy(xpath="//ms-save-button/button")
-    public WebElement saveButton;
-
     @FindBy(xpath="//div[contains(text(),'successfully')]")
     public WebElement successMessage;
 
