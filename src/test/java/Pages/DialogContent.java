@@ -29,12 +29,28 @@ public class DialogContent {
     @FindBy(xpath="//ms-add-button[contains(@tooltip,'ADD')]//button")
     public WebElement addButton;
 
-
     @FindBy(xpath="//div[contains(text(),'successfully')]")
     public WebElement successMessage;
 
     @FindBy(xpath="//ms-search-button//button")
     public WebElement searchButton;
+
+
+    @FindBy(xpath="(//ms-delete-button//button)[1]")
+    public WebElement deleteImageBtn;
+
+    @FindBy(xpath="//button[@type='submit']")
+    public WebElement deleteDialogBtn;
+    @FindBy(xpath="//ms-text-field[@formcontrolname='budgetAccountIntegrationCode']//input")
+    private WebElement integrationCode;
+
+    @FindBy(xpath="//ms-integer-field[@formcontrolname='priority']/input")
+    private WebElement priorityCode;
+
+    @FindBy(xpath="//mat-slide-toggle[@formcontrolname='active']")
+    private WebElement toggleBar;
+
+
 
     @FindBy(xpath="//div[contains(text(),'already exists')]")
     public WebElement alreadyExist;
