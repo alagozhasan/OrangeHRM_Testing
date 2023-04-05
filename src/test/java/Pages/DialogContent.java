@@ -13,6 +13,14 @@ public class DialogContent {
 
     @FindBy(css = "")
     public WebElement passwordInput;
+    @FindBy(css = "input[formcontrolname='username']")
+    public WebElement username;
+
+    @FindBy(css="input[formcontrolname='password']")
+    public WebElement password;
+
+    @FindBy(css="button[aria-label='LOGIN']")
+    public WebElement loginButton;
 
 
 
