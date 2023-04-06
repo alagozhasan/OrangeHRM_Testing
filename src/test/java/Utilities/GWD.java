@@ -77,6 +77,14 @@ public class GWD {
     public static String threadBrowserGet(){
         return threadBrowserName.get();
     }
+
+    public static void waitForJustTry(int sn){
+        try {
+            Thread.sleep(1000*sn);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
 
 
