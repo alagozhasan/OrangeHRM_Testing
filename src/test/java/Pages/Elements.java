@@ -94,5 +94,8 @@ public class Elements extends Parent {
     @FindBy(xpath = "//*[text()='No Records Found']")
     public WebElement searchDeleteConfirmMessage;
 
+  //  @FindBy (xpath = "//span[text()='Invalid']")
+  //  public WebElement invalid; Merve Arslan
+
 
 }
