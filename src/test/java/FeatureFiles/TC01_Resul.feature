@@ -9,3 +9,5 @@ Feature:  ESS User Functionalitiy
     And I fill up the form with required info
     And I click on save button
     Then I verify that ESS user on the list
+
+    And Ekstra delete method for saved username

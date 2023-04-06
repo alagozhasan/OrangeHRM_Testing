@@ -59,4 +59,12 @@ public class TC01_ResulSteps {
         e.javaScpritClickFunction(e.searchButton);
         e.verifyContainsTextFunction(e.searchResult, "ress6161");
     }
+
+    @And("Ekstra delete method for saved username")
+    public void ekstraDeleteMethodForSavedUsername() {
+        e.clickFunction(e.searchDeleteIcon);
+        e.clickFunction(e.searchDeleteConfirmButton);
+        e.verifyContainsTextFunction(e.searchDeleteConfirmMessage,"No Records Found");
+
+    }
 }

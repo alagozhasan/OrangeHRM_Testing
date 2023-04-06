@@ -85,5 +85,14 @@ public class Elements extends Parent {
     @FindBy(xpath = "(//div[@class='oxd-table-cell oxd-padding-cell']/div)[2]")
     public WebElement searchResult;
 
+    @FindBy(css = "div[class='oxd-table-cell-actions']>button")
+    public WebElement searchDeleteIcon;
+
+    @FindBy(xpath = "(//div[@class='orangehrm-modal-footer']/button)[2]")
+    public WebElement searchDeleteConfirmButton;
+
+    @FindBy(xpath = "//*[text()='No Records Found']")
+    public WebElement searchDeleteConfirmMessage;
+
 
 }
