@@ -2,9 +2,7 @@ package Pages;
 
 import Utilities.GWD;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -15,6 +13,7 @@ public class Parent {
 
     WebDriverWait wait=new WebDriverWait(GWD.getDriver(),
             Duration.ofSeconds(15));
+    JavascriptExecutor js = (JavascriptExecutor)GWD.getDriver();
 
     public void sendKeysFunction(WebElement element, String yazi)
     {
@@ -33,10 +32,7 @@ public class Parent {
     public void verifyContainsTextFunction(WebElement element, String value){
         wait.until(ExpectedConditions.textToBePresentInElement(element, value));
         Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()),"No such TEXT");
-        new Actions(GWD.getDriver()).sendKeys(Keys.ESCAPE).perform();
-
     }
-
 
     public void scrollToElement(WebElement element){
         JavascriptExecutor js=(JavascriptExecutor) GWD.getDriver();
@@ -49,5 +45,18 @@ public class Parent {
 
     public void waitUntilClickable(WebElement element){
         wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    public void javaScpritClickFunction(WebElement element){
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+        js.executeScript("arguments[0].click();",element);
+    }
+
+    public void waitUntilInVisible(WebElement element){
+        wait.until(ExpectedConditions.invisibilityOf(element));
+    }
+
+    public void waitTextToBePresent(WebElement element,String text){
+        wait.until(ExpectedConditions.textToBePresentInElement(element,text));
     }
 }

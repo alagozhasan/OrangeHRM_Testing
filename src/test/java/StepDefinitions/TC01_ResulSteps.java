@@ -27,21 +27,20 @@ public class TC01_ResulSteps {
 
     @When("I click on add button")
     public void iClickOnAddButton() {
-
-        e.clickFunction(e.addButton);
-
+        e.javaScpritClickFunction(e.addButton);
     }
 
     @And("I fill up the form with required info")
     public void iFillUpTheFormWithRequiredInfo() {
         e.clickFunction(e.userRole);
         e.clickFunction(e.selectRoleESS);
-        e.sendKeysFunction(e.employeeName,"Paul Collings");
-        GWD.waitForJustTry(5);
+        e.sendKeysFunction(e.employeeName,e.employeeNameIcin.getText());
+        e.waitTextToBePresent(e.selectEmployeeName, e.employeeNameIcin.getText());
         e.clickFunction(e.selectEmployeeName);
         e.clickFunction(e.status);
         e.clickFunction(e.selectStatusEnable);
-        e.sendKeysFunction(e.username,"ress61");
+        e.sendKeysFunction(e.username,"ress6161");
+        e.waitUntilInVisible(e.usernameMessage);
         e.sendKeysFunction(e.password, "Ress123.");
         e.sendKeysFunction(e.passwordConfirm,"Ress123.");
 
@@ -52,7 +51,12 @@ public class TC01_ResulSteps {
         e.clickFunction(e.saveButton);
     }
 
+
     @Then("I verify that ESS user on the list")
     public void iVerifyThatESSUserOnTheList() {
+        e.waitUntilVisible(e.addButton);
+        e.sendKeysFunction(e.usernameSearchBox, "ress6161");
+        e.javaScpritClickFunction(e.searchButton);
+        e.verifyContainsTextFunction(e.searchResult, "ress6161");
     }
 }

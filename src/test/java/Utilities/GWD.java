@@ -3,11 +3,9 @@ package Utilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
-
 import java.util.Locale;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -58,7 +56,7 @@ public class GWD {
 
     public static void quitDriver(){
         try {
-            Thread.sleep(5000);
+            Thread.sleep(4000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
