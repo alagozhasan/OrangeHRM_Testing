@@ -70,6 +70,11 @@ public class Elements extends Parent {
     public WebElement saveButton;
 
 
+    @FindBy(xpath = "//*[ @class='oxd-text oxd-text--span oxd-input-field-error-message oxd-input-group__message']")
+    public WebElement displaymessage; //merve d. ekledi
+
+
+
     //admin sayfasındaki üst arama kısmı için
     @FindBy(xpath = "(//div[@class='oxd-form-row']//input)[1]")
     public WebElement usernameSearchBox;
@@ -79,7 +84,6 @@ public class Elements extends Parent {
 
     @FindBy(xpath = "(//div[@class='oxd-table-cell oxd-padding-cell']/div)[2]")
     public WebElement searchResult;
-
 
 
 }
