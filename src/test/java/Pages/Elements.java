@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class Elements extends Parent {
 
     public Elements() {
@@ -96,6 +98,8 @@ public class Elements extends Parent {
 
   //  @FindBy (xpath = "//span[text()='Invalid']")
   //  public WebElement invalid; Merve Arslan
+    @FindBy (css="[class='oxd-autocomplete-wrapper']>div")
+    public List<WebElement> dropboxmessage;
 
 
 }

@@ -3,6 +3,8 @@ package StepDefinitions;
 import Pages.Elements;
 import Utilities.GWD;
 import io.cucumber.java.en.*;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 
 public class TC05_MerveASteps {
@@ -16,6 +18,17 @@ public class TC05_MerveASteps {
 
     @Then("I verify that notification messages “no records found” and “invalid” in red color displayed.")
     public void iVerifyThatNotificationMessagesNoRecordsFoundAndInvalidInRedColorDisplayed() {
-        e.displaymessage.isDisplayed();
+        GWD.waitForJustTry(5);
+        for (WebElement e:e.dropboxmessage) {
+            if (e.getText().contains("No Records Found")){
+               Assert.assertTrue(e.getText().contains("No Records Found"));
+
+               break;
+            }
+        }
+        System.out.println("e.dropboxmessage.size() = " + e.dropboxmessage.size());
+        e.dropboxmessage.get(1).click();
+        Assert.assertTrue(e.displaymessage.isDisplayed());
+
     }
 }
