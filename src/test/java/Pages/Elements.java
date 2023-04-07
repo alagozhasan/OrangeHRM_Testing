@@ -10,15 +10,15 @@ import java.util.List;
 public class Elements extends Parent {
 
     public Elements() {
-        PageFactory.initElements(GWD.getDriver(),this);
+        PageFactory.initElements(GWD.getDriver(), this);
     }
 
 
     // Login kısmı
-    @FindBy(css = "[name='username']" )
+    @FindBy(css = "[name='username']")
     public WebElement loginUsername;
 
-    @FindBy(css = "[name='password']" )
+    @FindBy(css = "[name='password']")
     public WebElement loginPassword;
 
     @FindBy(css = "button[type='submit']")
@@ -76,7 +76,6 @@ public class Elements extends Parent {
     public WebElement displaymessage; //merve d. ekledi
 
 
-
     //admin sayfasındaki üst arama kısmı için
     @FindBy(xpath = "(//div[@class='oxd-form-row']//input)[1]")
     public WebElement usernameSearchBox;
@@ -96,10 +95,15 @@ public class Elements extends Parent {
     @FindBy(xpath = "//*[text()='No Records Found']")
     public WebElement searchDeleteConfirmMessage;
 
-  //  @FindBy (xpath = "//span[text()='Invalid']")
-  //  public WebElement invalid; Merve Arslan
+    //  @FindBy (xpath = "//span[text()='Invalid']")
+    //  public WebElement invalid; Merve Arslan
     @FindBy (css="[class='oxd-autocomplete-wrapper']>div")
     public List<WebElement> dropboxmessage;
 
 
+    @FindBy(xpath = "(//div/div[@role='cell'])[2]")
+    public WebElement lastTakenUsername;
+
+    @FindBy(xpath = "(//div/div[@role='rowgroup'])[2]")
+    public WebElement userList;
 }

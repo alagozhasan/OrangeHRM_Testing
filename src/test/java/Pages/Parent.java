@@ -35,6 +35,10 @@ public class Parent {
         wait.until(ExpectedConditions.textToBePresentInElement(element, value));
         Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()),"No such TEXT");
     }
+    public void classContainsAttirbuteAssert(WebElement element,String attirbute){
+        Assert.assertTrue(element.getAttribute("class").contains(attirbute));
+    }
+
 
     public void scrollToElement(WebElement element){
         JavascriptExecutor js=(JavascriptExecutor) GWD.getDriver();
