@@ -7,5 +7,6 @@ Feature: ESS User Functionality
     And I navigate to admin management page
     When I click on add button
     And I fill up the form with Mandatory fields
-    And I click on add button
+    And I click on save button
     Then I verify that ESS user on the list
+    And Ekstra delete method for saved username
