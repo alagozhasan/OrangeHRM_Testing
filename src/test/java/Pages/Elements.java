@@ -115,4 +115,7 @@ public class Elements extends Parent {
 
     @FindBy(xpath = "//span[contains(@class,'password-chip')]")
     public WebElement passwordChip;
+
+    @FindBy(xpath = "//h6[contains(@class,'main-title') and text()='Add User']")
+    public WebElement addUserTitle;
 }

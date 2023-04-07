@@ -1,6 +1,6 @@
 Feature:AddUser Functionality
 
-  Background: Add User and Save User
+  Background: Navigate OrangeHRM, login as Admin and open Add User Page
     Given Navigate to OrangeHRM Website
     When  I login as an admin
     And   I navigate to admin management page
