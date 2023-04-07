@@ -106,4 +106,13 @@ public class Elements extends Parent {
 
     @FindBy(xpath = "(//div/div[@role='rowgroup'])[2]")
     public WebElement userList;
+
+    @FindBy(xpath = "//span[contains(@class, 'error-message')]")
+    public WebElement redErrorMessage;
+
+    @FindBy(xpath = "//span[contains(@class, 'error-message')]")
+    public List<WebElement> allRedErrorMessage;
+
+    @FindBy(xpath = "//span[contains(@class,'password-chip')]")
+    public WebElement passwordChip;
 }
