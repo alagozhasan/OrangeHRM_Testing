@@ -1,6 +1,6 @@
-Feature: Confirming Password Functionality
+Feature: Right Password Length Functionality
 
-  Scenario: Entering different value in to the "confirm password" field
+  Scenario: Entering value which isless than 8 characters into the "Password" field
 
     Given Navigate to OrangeHRM Website
     When I login as an admin
