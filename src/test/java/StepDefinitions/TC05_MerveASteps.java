@@ -18,16 +18,10 @@ public class TC05_MerveASteps {
 
     @Then("I verify that notification messages “no records found” and “invalid” in red color displayed.")
     public void iVerifyThatNotificationMessagesNoRecordsFoundAndInvalidInRedColorDisplayed() {
-        GWD.waitForJustTry(5);
-        for (WebElement e:e.dropboxmessage) {
-            if (e.getText().contains("No Records Found")){
-               Assert.assertTrue(e.getText().contains("No Records Found"));
 
-               break;
-            }
-        }
-        System.out.println("e.dropboxmessage.size() = " + e.dropboxmessage.size());
-        e.dropboxmessage.get(1).click();
+        e.waitTextToBePresent(e.selectEmployeeName, "No Records Found");
+        Assert.assertTrue(e.selectEmployeeName.getText().contains("Found"));
+        e.clickFunction(e.selectEmployeeName);
         Assert.assertTrue(e.displaymessage.isDisplayed());
 
     }
