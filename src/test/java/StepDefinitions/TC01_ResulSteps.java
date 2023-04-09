@@ -4,7 +4,6 @@ import Pages.Elements;
 import Utilities.GWD;
 import io.cucumber.java.en.*;
 
-
 public class TC01_ResulSteps {
 
     Elements e = new Elements();
@@ -43,7 +42,6 @@ public class TC01_ResulSteps {
         e.waitUntilInVisible(e.usernameMessage);
         e.sendKeysFunction(e.password, "Ress123.");
         e.sendKeysFunction(e.passwordConfirm,"Ress123.");
-
     }
 
     @And("I click on save button")
@@ -65,6 +63,5 @@ public class TC01_ResulSteps {
         e.clickFunction(e.searchDeleteIcon);
         e.clickFunction(e.searchDeleteConfirmButton);
         e.verifyContainsTextFunction(e.searchDeleteConfirmMessage,"No Records Found");
-
     }
 }

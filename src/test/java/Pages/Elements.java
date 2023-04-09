@@ -14,7 +14,6 @@ public class Elements extends Parent {
     }
 
 
-    // Login kısmı
     @FindBy(css = "[name='username']")
     public WebElement loginUsername;
 
@@ -24,18 +23,11 @@ public class Elements extends Parent {
     @FindBy(css = "button[type='submit']")
     public WebElement loginButton;
 
-
-    //Admin sayfasına gitmek için sol taraftaki admin butonu
     @FindBy(xpath = "(//ul[@class='oxd-main-menu']/li)[1]")
     public WebElement adminButton;
 
-
-    //Admin sayfasındaki ekleme butonu
     @FindBy(css = "div[class='orangehrm-header-container']>button")
     public WebElement addButton;
-
-
-    //ekleme tuşuna bastıktan sonra gelen kısım
 
     @FindBy(xpath = "(//div[@class='oxd-select-wrapper'])[1]")
     public WebElement userRole;
@@ -50,7 +42,8 @@ public class Elements extends Parent {
     public WebElement selectStatusEnable;
 
     @FindBy(css = "p[class='oxd-userdropdown-name']")
-    public WebElement employeeNameIcin;  // sağ üstteki Admin fotosunda yazan ismi alıp Employee Name e göndericez
+    public WebElement employeeNameIcin;
+
     @FindBy(xpath = "(//div[@class='oxd-form-row']//input)[1]")
     public WebElement employeeName;
 
@@ -59,6 +52,7 @@ public class Elements extends Parent {
 
     @FindBy(css = "span[class*='message']")
     public WebElement usernameMessage;
+
     @FindBy(xpath = "(//div[@class='oxd-form-row']//input)[2]")
     public WebElement username;
 
@@ -71,12 +65,9 @@ public class Elements extends Parent {
     @FindBy(css = "button[type='submit']")
     public WebElement saveButton;
 
-
     @FindBy(xpath = "//*[ @class='oxd-text oxd-text--span oxd-input-field-error-message oxd-input-group__message']")
-    public WebElement displaymessage; //merve d. ekledi
+    public WebElement displaymessage;
 
-
-    //admin sayfasındaki üst arama kısmı için
     @FindBy(xpath = "(//div[@class='oxd-form-row']//input)[1]")
     public WebElement usernameSearchBox;
 
@@ -95,11 +86,8 @@ public class Elements extends Parent {
     @FindBy(xpath = "//*[text()='No Records Found']")
     public WebElement searchDeleteConfirmMessage;
 
-    //  @FindBy (xpath = "//span[text()='Invalid']")
-    //  public WebElement invalid; Merve Arslan
     @FindBy (css="[class='oxd-autocomplete-wrapper']>div")
     public List<WebElement> dropboxmessage;
-
 
     @FindBy(xpath = "(//div/div[@role='cell'])[2]")
     public WebElement lastTakenUsername;

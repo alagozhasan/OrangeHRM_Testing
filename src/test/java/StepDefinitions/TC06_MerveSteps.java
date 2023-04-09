@@ -2,10 +2,7 @@ package StepDefinitions;
 
 import Pages.Elements;
 import Utilities.GWD;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import io.cucumber.java.en.*;
 
 public class TC06_MerveSteps {
 
@@ -32,15 +29,10 @@ public class TC06_MerveSteps {
     @When("Admin send a value in to the username field which is less than five characters")
     public void adminSendAValueInToTheUsernameFieldWhichIsLessThanFiveCharacters() {
         e.sendKeysFunction(e.username,"mrv");
-
-
     }
 
     @Then("Notification messages should be in red color displayed.")
     public void notificationMessagesShouldBeInRedColorDisplayed() {
         e.displaymessage.isDisplayed();
-
-
-
     }
 }

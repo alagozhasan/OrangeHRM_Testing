@@ -1,10 +1,7 @@
 package StepDefinitions;
 
 import Pages.Elements;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Then;
-
-import java.util.List;
+import io.cucumber.java.en.*;
 
 public class TC03_BurcuSteps {
     Elements e=new Elements();
@@ -16,7 +13,6 @@ public class TC03_BurcuSteps {
             System.out.println("All mandatory fields are empty, user cannot be added ");
         else
             System.out.println("Some of mandatory fields are empty, user cannot be added");
-
     }
 
     @And("Fill only {string} and {string} fields on Add User Page")
@@ -26,9 +22,5 @@ public class TC03_BurcuSteps {
         e.sendKeysFunction(e.password,password);
         e.waitTextToBePresent(e.passwordChip, "Strongest");
         e.waitUntilInVisible(e.redErrorMessage);
-
     }
-
-
-
 }

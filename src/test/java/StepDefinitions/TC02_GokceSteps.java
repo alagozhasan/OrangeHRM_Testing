@@ -19,6 +19,5 @@ public class TC02_GokceSteps {
         e.waitUntilInVisible(e.usernameMessage);
         e.sendKeysFunction(e.password, "Ress123.");
         e.sendKeysFunction(e.passwordConfirm,"Ress123.");
-
     }
 }

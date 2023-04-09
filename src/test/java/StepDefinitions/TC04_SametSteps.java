@@ -1,10 +1,7 @@
 package StepDefinitions;
 
 import Pages.Elements;
-import Utilities.GWD;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
+import io.cucumber.java.en.*;
 
 public class TC04_SametSteps {
 
@@ -15,13 +12,11 @@ public class TC04_SametSteps {
 
         e.sendKeysFunction(e.password, "SamBay123.");
         e.sendKeysFunction(e.passwordConfirm,"SamBay123");
-
     }
 
     @Then("I verify that notification messages “Passwords do not match” in red color displayed.")
     public void iVerifyThatNotificationMessagesPasswordsDoNotMatchInRedColorDisplayed() {
 
         e.verifyContainsTextFunction(e.redErrorMessage,"Passwords do not match");
-
     }
 }

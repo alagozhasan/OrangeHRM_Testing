@@ -66,7 +66,6 @@ public class GWD {
             WebDriver driver = threadDriver.get(); driver=null;
             threadDriver.set(driver);
         }
-
     }
 
     public static void threadBrowserSet(String browser){

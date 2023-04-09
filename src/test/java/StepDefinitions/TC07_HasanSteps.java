@@ -2,7 +2,6 @@ package StepDefinitions;
 
 import Pages.Elements;
 import io.cucumber.java.en.*;
-import org.testng.Assert;
 
 public class TC07_HasanSteps {
     Elements e = new Elements();
@@ -25,6 +24,4 @@ public class TC07_HasanSteps {
         e.classContainsAttirbuteAssert(e.usernameMessage, "error");
         e.verifyContainsTextFunction(e.usernameMessage, "Already");
     }
-
-
 }

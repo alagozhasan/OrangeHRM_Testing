@@ -6,22 +6,20 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
 import java.time.Duration;
 import java.util.List;
 
 public class Parent {
 
-    WebDriverWait wait=new WebDriverWait(GWD.getDriver(),
-            Duration.ofSeconds(15));
+    WebDriverWait wait=new WebDriverWait(GWD.getDriver(),Duration.ofSeconds(15));
     JavascriptExecutor js = (JavascriptExecutor)GWD.getDriver();
 
-    public void sendKeysFunction(WebElement element, String yazi)
+    public void sendKeysFunction(WebElement element, String text)
     {
         waitUntilVisible(element);
         scrollToElement(element);
         element.clear();
-        element.sendKeys(yazi);
+        element.sendKeys(text);
     }
 
     public void clickFunction(WebElement element){
@@ -32,8 +30,9 @@ public class Parent {
 
     public void verifyContainsTextFunction(WebElement element, String value){
         wait.until(ExpectedConditions.textToBePresentInElement(element, value));
-        Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()),"No such TEXT");
+        Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()),"No Such TEXT");
     }
+
     public void classContainsAttirbuteAssert(WebElement element,String attirbute){
         Assert.assertTrue(element.getAttribute("class").contains(attirbute));
     }

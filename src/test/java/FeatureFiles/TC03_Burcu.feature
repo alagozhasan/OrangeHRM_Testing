@@ -7,7 +7,6 @@ Feature:AddUser Functionality
     When  I click on add button
 
 
-
   Scenario: Adding User without filling all mandatory fields on Add User Page
     And   I click on save button
     Then Verify “Required“ notification message on AddUserPage

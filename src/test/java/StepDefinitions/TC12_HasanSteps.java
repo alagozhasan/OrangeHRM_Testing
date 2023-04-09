@@ -1,8 +1,7 @@
 package StepDefinitions;
 
 import Pages.Elements;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Then;
+import io.cucumber.java.en.*;
 
 public class TC12_HasanSteps {
     Elements e = new Elements();
